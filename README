@@ -1,0 +1,52 @@
+hila953, omer_siton
+Hila Frumer (318933405), Omer Siton (316123819)
+
+EX: 5
+
+FILES:
+container.cpp
+sockets.cpp
+Makefile -- makefile
+README -- this file
+
+REMARKS:
+---------
+
+ANSWERS:
+---------
+Q1:
+
+One general use of Linux pid namespaces is setting a New Process IDs Namespace,
+independently of what assigned before (CLONE_NEWPID).
+From the parent's process perspective, the child's PID will be PARENT_PID.1 ,
+but the PID of the offspring process will be assigned to 1.
+
+Q2:
+
+Creating a separate mount namespace allows each of these isolated processes to have a completely different
+view of the entire system's mountpoint structure from the original one.
+This allows you to have a different root for each isolated process,
+as well as other mountpoints that are specific to those processes.
+
+
+Q3:
+
+Cgroup defines what the container can do. One general use of Linux cgroups is limiting usage of network bandwidth.
+
+Q4:
+
+Clone system call create a new ("child") process, in a manner similar to fork.
+This system call, by contrast with fork, provide more precise control over what pieces of execution
+context are shared between the calling process and the child process.  For example,
+using clone system call, the caller can control whether or not the two processes share
+the virtual address space and the table of file descriptors.
+
+Q5:
+
+Every process/command in Linux/Unix like systems has a current working directory called root directory.
+chroot is changes the root directory for currently running processes as well as its child processes, to that specified in path.
+
+Q6:
+The procfs provides a method of communication between kernel space and user space.
+For example, the GNU version of the process reporting utility ps uses the proc file system to obtain its data,
+without using any specialized system calls.
